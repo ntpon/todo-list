@@ -183,7 +183,7 @@ export default class App {
       const classStatus = task.getStatus() ? 'task-success' : '';
       const checked = task.getStatus() ? 'checked' : '';
       taskTemplate += `<div class="task">
-          <div>
+          <div class="task-des">
             <label class="label-task ${classStatus}" for="${
         task.id
       }" data-id="${
