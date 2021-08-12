@@ -68,6 +68,7 @@ export default class App {
         (t) => t.id.toString() === checkItem.dataset.id.toString()
       );
       task.toggle();
+      this.renderTask(project);
       Storage.saveTodoList(this.projects);
     }
 
