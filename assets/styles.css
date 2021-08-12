@@ -242,7 +242,10 @@ textarea {
 .nav-item:hover i {
   visibility: visible;
 }
-
+.task-des {
+  display: flex;
+  align-items: center;
+}
 .nav-item-link i {
   margin-right: 10px;
 }
