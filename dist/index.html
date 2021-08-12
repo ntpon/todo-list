@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/4c536a6bd5.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./main.js" defer></script>
     <title>Todo List</title>
   </head>
   <body>
@@ -18,37 +19,85 @@
       </header>
       <div class="sidebar">
         <h1 class="sidebar-title">Project List</h1>
-        <ul class="nav">
-          <li class="nav-item">Today</li>
-          <li class="nav-item">Coding</li>
+        <ul class="nav" id="nav-container">
+          <!-- <li class="nav-item">Today</li>
+          <li class="nav-item">Coding</li> -->
         </ul>
-        <button class="btn-add-project">
+        <button class="btn-add-project" id="add-project">
           <i class="fas fa-plus" aria-hidden="true"></i>Add Project
         </button>
       </div>
       <main>
-        <h1 class="main-title">Today</h1>
-        <p class="main-des">Keep track of my progress in every day.</p>
-        <div class="task-list">
-          <div class="task">
-            <input type="checkbox" id="1628435646652" />
-            <label class="label-task task-sucees" for="1628435646652">
-              <span>Read programming book</span>
-              , <span class="date">2021-08-11</span> <br
-            /></label>
+        <div id="main-container">
+          <h1 class="main-title" id="main-title"></h1>
+          <p class="main-des" id="main-des"></p>
+          <div class="task-list" id="task-list-container">
+            <!-- <div class="task">
+              <input type="checkbox" id="1628435646652" />
+              <label class="label-task task-sucees" for="1628435646652">
+                <span>Read programming book</span>
+                , <span class="date">2021-08-11</span> <br
+              /></label>
+            </div>
+            <div class="task">
+              <input type="checkbox" id="1628435646652" />
+              <label class="label-task" for="1628435646652">
+                <span>Create some project</span>
+                , <span class="date">2021-08-11</span> <br
+              /></label>
+            </div> -->
           </div>
-          <div class="task">
-            <input type="checkbox" id="1628435646652" />
-            <label class="label-task" for="1628435646652">
-              <span>Create some project</span>
-              , <span class="date">2021-08-11</span> <br
-            /></label>
-          </div>
+          <button class="btn-add-task" id="add-task">
+            <i class="fas fa-plus" aria-hidden="true"></i>
+            Add Task
+          </button>
         </div>
-        <button class="btn-add-task" id="button-add-task">
-          <i class="fas fa-plus" aria-hidden="true"></i>
-          Add Task
-        </button>
+        <div id="create-project">
+          <h1 class="main-title">ADD PROJECT</h1>
+          <p class="main-des">
+            Create new project for main traking in your tasks .
+          </p>
+          <form id="form-create-project">
+            <input id="input-name" type="text" placeholder="Name " required />
+            <textarea
+              name=""
+              id="input-des"
+              cols="30"
+              rows="5"
+              placeholder="Description"
+              required
+            ></textarea>
+            <div class="btn-form-container">
+              <button class="btn btn-submit-project">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div id="create-task">
+          <h1 class="main-title">ADD TASK</h1>
+          <p class="main-des" id="main-des">
+            Create new task for <span id="title-main-project"></span> project
+          </p>
+
+          <form id="form-task">
+            <input
+              id="input-task-name"
+              type="text"
+              placeholder="Name "
+              required
+            />
+            <input
+              id="input-date"
+              placeholder="Date"
+              class="textbox-n"
+              type="text"
+              onfocus="(this.type='date')"
+              required
+            />
+            <div class="btn-form-container">
+              <button class="btn btn-submit-project">Submit</button>
+            </div>
+          </form>
+        </div>
       </main>
     </div>
   </body>

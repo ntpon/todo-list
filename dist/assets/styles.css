@@ -44,11 +44,17 @@ header {
 .nav {
   margin-top: 15px;
 }
-
+.nav-item-link {
+  cursor: pointer;
+  width: 100%;
+}
 .nav-item {
+  list-style: none;
   font-size: 20px;
-  margin-left: 30px;
+  margin-left: 15px;
   padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sidebar-title {
@@ -82,6 +88,7 @@ main {
 .task {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .label-task {
   margin-left: 5px;
@@ -105,7 +112,7 @@ input[type='checkbox'] {
   color: #1234dad6;
 }
 
-.task-sucees {
+.task-success {
   text-decoration: line-through;
   font-weight: bold;
 }
@@ -146,4 +153,108 @@ input[type='checkbox'] {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+form {
+  margin-top: 10px;
+
+  width: 100%;
+}
+
+input[type='text'],
+input[type='date'],
+textarea {
+  display: block;
+  padding: 8px;
+  margin: 5px auto;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+input[type='text'],
+input[type='date'] {
+  min-width: 400px;
+}
+
+textarea {
+  margin-top: 10px;
+  min-width: 400px;
+}
+
+.btn {
+  padding: 5px 8px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.btn-submit-project {
+  min-width: 150px;
+  background-color: #424242;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.btn-submit-project:active,
+.btn-submit-project:hover,
+.btn-add-project:active,
+.btn-add-project:hover,
+.btn-add-task:active,
+.btn-add-task:hover {
+  background-color: #424242d6;
+}
+
+.btn-form-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#title-main-project {
+  color: red;
+}
+
+.btn-task-delete {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+.task:hover {
+  font-size: 22px;
+  animation: scaleFontSize;
+  animation-duration: 500ms;
+}
+
+.btn-delete-project {
+  float: right;
+  margin-right: 10px;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 5px;
+  z-index: 1;
+}
+.btn-delete-project i {
+  visibility: hidden;
+}
+.nav-item:hover i {
+  visibility: visible;
+}
+
+.nav-item-link i {
+  margin-right: 10px;
+}
+/* .btn-task-delete:active,
+.btn-task-delete:hover {
+  background-color: #20232a;
+} */
+@keyframes scaleFontSize {
+  from {
+    font-size: 18px;
+  }
+  to {
+    font-size: 22px;
+  }
 }
